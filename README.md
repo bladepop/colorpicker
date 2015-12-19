@@ -23,7 +23,7 @@ The directive receives 3 parameters
 - options: string array with color defintions in it, any valid css color representation works.
 - onColorChanged: a method that will be called when the color changes, method should look like onColorChanged(newColor, oldColor)
 
-Example:"
+Example:
 ````sh
 <color-picker color="color" options="options" on-color-changed="colorChanged(newColor, oldColor)"></color-picker>
 ````
