@@ -10,6 +10,7 @@ It is very basic and made for a personal project, if you feel like improving it 
 
 ### Usage:
 
+- include 'colorPicker.js' and 'colorPickerStyle.css' in your page
 - Add 'tb-color-picker' dependency to your angular module
 - use <color-picker> tag in your code
 - Use any valid css color representation :)
