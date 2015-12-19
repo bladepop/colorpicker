@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" ng-app="example">
   <head>
     <meta charset="UTF-8">
     <title>Angular-Colorpicker by bladepop</title>
@@ -8,8 +8,12 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" href="colorPickerStyle.css" />
+    <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.8/angular.js" data-semver="1.4.8"></script>
+    <script src="colorPicker.js"></script>
+    <script src="app.js"></script>
   </head>
-  <body>
+  <body ng-controller="MainCtrl">
     <section class="page-header">
       <h1 class="project-name">Angular-Colorpicker</h1>
       <h2 class="project-tagline">Pure Angular.JS circle color-picker similar to google keep&#39;s color picker</h2>
@@ -26,7 +30,11 @@
 
 <p>Crafted by Daniel Baruch @ <a href="https://github.com/bladepop/colorpicker">https://github.com/bladepop/colorpicker</a></p>
 
-<p>Live example at <a href="http://bladepop.github.io/">http://bladepop.github.io/</a></p>
+<p>Selected color is {{color}}</p>
+
+<div style="margin-left: 50px">
+    <color-picker color="color" options="options" on-color-changed="colorChanged(newColor, oldColor)"></color-picker>
+</div>
 
 <p>Angular-ColorPicker is a simple directive made purely in angualr.js
 It lets the user choose a color from a list of colors you set in a pop-over window.</p>
