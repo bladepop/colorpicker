@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="example">
+
+<head>
+    <meta charset="utf-8" />
+    <title>AngularJS Color Picker</title>
+    <link data-require="bootstrap-css@*" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="../dist/colorPickerStyle.css" />
+    <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.8/angular.js" data-semver="1.4.8"></script>
+    <script src="../dist/colorPicker.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-controller="MainCtrl" style="padding: 10px">
+
+<h1>Angular.JS Color picker by Daniel Baruch</h1>
+<a href="https://github.com/bladepop/colorpicker">github repo</a>
+
+<p>Selected color is {{color}}</p>
+
+<div style="margin-left: 50px">
+    <color-picker color="color" options="options" on-color-changed="colorChanged(newColor, oldColor)"></color-picker>
+</div>
+
+</body>
+
+</html>
